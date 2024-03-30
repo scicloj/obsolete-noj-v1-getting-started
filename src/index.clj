@@ -13,7 +13,7 @@
           :width "40"
           :align "left"}]]]]
 
-;; # Noj - getting started
+;; # Noj - getting started - from raw data to a blog post
 
 ;; This is a getting-started tutorial for [Noj](https://scicloj.github.io/noj/) (scinojure) - a recommended way to use the emerging Clojure data stack.
 
