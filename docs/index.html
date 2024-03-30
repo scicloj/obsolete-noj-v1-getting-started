@@ -80,8 +80,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#analysing-the-hours-of-chicago-bike-trips" id="toc-analysing-the-hours-of-chicago-bike-trips" class="nav-link active" data-scroll-target="#analysing-the-hours-of-chicago-bike-trips">Analysing the hours of Chicago bike trips</a>
+  <li><a href="#noj---getting-started" id="toc-noj---getting-started" class="nav-link active" data-scroll-target="#noj---getting-started">Noj - getting started</a>
   <ul>
+  <li><a href="#question" id="toc-question" class="nav-link" data-scroll-target="#question">Question</a></li>
   <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup">Setup</a></li>
   <li><a href="#reading-data" id="toc-reading-data" class="nav-link" data-scroll-target="#reading-data">Reading data</a></li>
   <li><a href="#processing-data" id="toc-processing-data" class="nav-link" data-scroll-target="#processing-data">Processing data</a></li>
@@ -110,9 +111,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="index_files/vega10.js" type="text/javascript"></script>
 <script src="index_files/vega11.js" type="text/javascript"></script>
 <script src="index_files/vega12.js" type="text/javascript"></script>
-<section id="analysing-the-hours-of-chicago-bike-trips" class="level1">
-<h1>Analysing the hours of Chicago bike trips</h1>
+<a href="https://scicloj.github.io/clojure-data-scrapbook/"><img align="left" alt="SciCloj logo" src="https://scicloj.github.io/sci-cloj-logo-transparent.png" width="40"></a><table><tbody><tr><td>This is part of the Scicloj <a href="https://scicloj.github.io/clojure-data-scrapbook/">Clojure Data Scrapbook</a>.</td></tr></tbody></table>
+<section id="noj---getting-started" class="level1">
+<h1>Noj - getting started</h1>
+<p>This is a getting-started tutorial for <a href="https://scicloj.github.io/noj/">Noj</a> (scinojure) - a recommended way to use the emerging Clojure data stack.</p>
+<p>It is considered part of the <a href="https://scicloj.github.io/clojure-data-scrapbook/">Clojure Data Scrapbook</a>, but is maintained as a separate repo to serve as a self-contained small example of a data-analysis report.</p>
+<p>Soon we will add an accompanying video tutorial.</p>
+<section id="question" class="level2">
+<h2 class="anchored" data-anchor-id="question">Question</h2>
 <p>Can we distinguish weekends from weekdays in terms of the hours in which people tend to use their bikes?</p>
+</section>
 <section id="setup" class="level2">
 <h2 class="anchored" data-anchor-id="setup">Setup</h2>
 <div class="sourceClojure">
@@ -126,6 +134,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="reading-data" class="level2">
 <h2 class="anchored" data-anchor-id="reading-data">Reading data</h2>
+<p>You may learn more about the <a href="https://www.kaggle.com/datasets/godofoutcasts/cyclistic-bike-share-2023">Cyclistic Bike Share 2023</a> dataset in our <a href="https://scicloj.github.io/clojure-data-scrapbook/projects/geography/chicago-bikes/index.html">Chicago bike trips</a> tutorial.</p>
 <div class="sourceClojure">
 <div class="sourceCode" id="cb2"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>(<span class="bu">defonce</span><span class="fu"> raw-trips</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  (<span class="kw">-&gt;</span> <span class="st">"data/202304_divvy_tripdata.csv.gz"</span></span>
@@ -265,7 +274,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 </div>
 <div class="sourceClojure">
-<div class="sourceCode" id="cb5"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>(<span class="bu">def</span><span class="fu"> hours-plot </span></span>
+<div class="sourceCode" id="cb5"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>(<span class="bu">def</span><span class="fu"> hours-plot</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  (<span class="kw">-&gt;</span> processed-trips</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>      (tc/group-by [<span class="at">:hour</span>])</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>      (tc/aggregate {<span class="at">:n</span> tc/row-count})</span>
