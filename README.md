@@ -6,9 +6,9 @@ This is a getting-started tutorial for [Noj](https://scicloj.github.io/noj/) (sc
 
 [source namespace](https://github.com/scicloj/noj-getting-started/blob/main/src/index.clj)
 
-It is considered part of the [Clojure Data Scrapbook](https://scicloj.github.io/clojure-data-scrapbook/), but is maintained as a separate repo to serve as a self-contained small example of a data-analysis report.
+[video tutorial](https://www.youtube.com/watch?v=5GluhUmMlpM)
 
-Soon we will add an accompanying video tutorial.
+It is considered part of the [Clojure Data Scrapbook](https://scicloj.github.io/clojure-data-scrapbook/), but is maintained as a separate repo to serve as a self-contained small example of a data-analysis report.
 
 ## License
 
