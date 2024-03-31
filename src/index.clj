@@ -19,7 +19,12 @@
 
 ;; It is considered part of the [Clojure Data Scrapbook](https://scicloj.github.io/clojure-data-scrapbook/), but is maintained as a separate repo to serve as a self-contained small example of a data-analysis report.
 
-;; Soon we will add an accompanying video tutorial.
+;; Video tutorial:
+
+^{:kindly/hide-code true
+  :kindly/kind :kind/video}
+{:youtube-id "5GluhUmMlpM"}
+
 
 ;; ## Question
 
@@ -67,11 +72,6 @@
 
 ;; ## Analysis
 
-(-> processed-trips
-    (tc/group-by [:hour])
-    (tc/aggregate {:n tc/row-count})
-    (tc/order-by [:hour]))
-
 (def hours-plot
   (-> processed-trips
       (tc/group-by [:hour])
@@ -81,6 +81,7 @@
                    {:X "hour"
                     :Y "n"})))
 
+hours-plot
 
 (kind/pprint hours-plot)
 
