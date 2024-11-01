@@ -1,4 +1,6 @@
-# noj-getting-started
+# OBSOLETE Noj v1 getting started
+
+This repo is outdated.
 
 This is a getting-started tutorial for [Noj](https://scicloj.github.io/noj/) (scinojure) - a recommended way to use the emerging Clojure data stack.
 
