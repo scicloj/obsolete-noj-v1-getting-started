@@ -4,9 +4,9 @@ This repo is outdated.
 
 This is a getting-started tutorial for [Noj](https://scicloj.github.io/noj/) (scinojure) - a recommended way to use the emerging Clojure data stack.
 
-[rendered notebook](https://scicloj.github.io/noj-getting-started/)
+[rendered notebook](https://scicloj.github.io/obsolete-noj-v1-getting-started/)
 
-[source namespace](https://github.com/scicloj/noj-getting-started/blob/main/src/index.clj)
+[source namespace](https://github.com/scicloj/obsolete-noj-v1-getting-started/blob/main/src/index.clj)
 
 [video tutorial](https://www.youtube.com/watch?v=5GluhUmMlpM)
 
